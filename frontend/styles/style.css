@@ -1,0 +1,504 @@
+/* ===== Reset & Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #fef6f3;
+    color: #333;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* ===== HEADER ===== */
+  .header {
+    background-color: #f2d1c9;
+    padding: 1rem 0;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #5c2c2c;
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #5c2c2c;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .nav-menu a:hover {
+    color: #a95e5e;
+    text-decoration: underline;
+  }
+  
+  .sign-up {
+    padding: 0.5rem 1rem;
+    background-color: #5c2c2c;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sign-up:hover {
+    background-color: #a95e5e;
+  }
+  
+  /* ===== BANNER SECTION ===== */
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(100%);
+    z-index: 0;
+  }
+  
+  .banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(206, 173, 173, 0.4);
+  }
+  
+  .banner-content {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    color: #8B5127;
+    padding: 1rem;
+    max-width: 50%;
+    margin-left: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .banner-content {
+      margin-left: 5%;
+    }
+  }
+  
+  .banner-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .banner-text p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-primary {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #5c2c2c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #a95e5e;
+  }
+  
+  /* ===== FEATURED PRODUCTS ===== */
+  .featured-products, .top-brands, .perfume-category {
+    padding: 4rem 0;
+    background-color: #f8e8e2;
+    text-align: center;
+  }
+  
+  .featured-products h2, .top-brands h2, .perfume-category h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #5c2c2c;
+  }
+  
+  .products-grid, .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 items per row */
+    gap: 2rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .products-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 items per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 items per row on small screens */
+    }
+  }
+  
+  .product-card, .brand-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .product-card img, .brand-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .buy-now {
+    padding: 0.8rem 2rem;
+    background-color: #5c2c2c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buy-now:hover {
+    background-color: #a95e5e;
+  }
+  
+  /* ===== MALE PERFUMES ===== */
+  .perfume-category.male {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align heading to the right */
+    text-align: left; /* Align text to the right */
+  }
+  
+  .perfume-category.male h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #5c2c2c;
+  }
+  
+  .perfume-category.male .products-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Display 6 items per row */
+    gap: 2rem;
+  }
+  
+  /* ===== FEMALE PERFUMES ===== */
+  .perfume-category.female {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align heading to the left */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .perfume-category.female h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #5c2c2c;
+  }
+  
+  .perfume-category.female .products-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Display 6 items per row */
+    gap: 2rem;
+  }
+  
+  .left-aligned {
+    position: absolute;
+    left: 20px;  
+    top: 20px;   
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;  
+  }
+  
+  /* ===== FOOTER SECTION ===== */
+  .footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer .social-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer .social-icons a img:hover {
+    transform: scale(1.1);
+  }
+  
+  .footer p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #fff;
+  }
+  
+  /* ===== ACTIVE NAV LINK ===== */
+  .nav-menu a.active {
+    color: #a95e5e;
+    font-weight: bold;
+    border-bottom: 2px solid #a95e5e;
+    padding-bottom: 2px;
+  }
+  
+  /* ===== TOP PERFUME BRANDS SECTION ===== */
+  .top-perfume-brands {
+    background-color: #f8e8e2;
+    padding: 4rem 0 2rem;
+    text-align: center;
+  }
+  
+  .top-perfume-brands h2 {
+    font-size: 2rem;
+    color: #5c2c2c;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* ===== EVENT DETAILS SECTION ===== */
+  .event-details {
+    background-color: #5c2c2c;
+    padding: 2rem 0;
+    color: #FFE0CA;
+  }
+  
+  .event-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .event-details p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  .emoji {
+    margin-right: 6px;
+    font-size: 1.2rem;
+  }
+  
+  /* ===== ALL PERFUMES CATEGORY (FROM EVENTS PAGE) ===== */
+  .perfume-category.all {
+    background-color: #f8e8e2;
+    padding: 4rem 0;
+  }
+  
+  .perfume-category.all h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #5c2c2c;
+  }
+  
+  /* ===== LOGIN BUTTON (SIGN-UP BUTTON) ===== */
+  .sign-up {
+    padding: 0.5rem 1rem;
+    background-color: #B0846D;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sign-up:hover {
+    background-color: #A95E5E;
+  }
+  .perfume-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 items per row */
+    gap: 2rem;
+  }
+  
+  .perfume-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .perfume-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  @media (max-width: 1024px) {
+    .perfume-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 items per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .perfume-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 items per row on small screens */
+    }
+  }
+  .top-perfume-brands {
+    background-color: #f8e8e2;
+    padding: 4rem 0 2rem;
+    text-align: center;
+  }
+  
+  .top-perfume-brands h2 {
+    font-size: 2rem;
+    color: #5c2c2c;
+    margin-bottom: 1.5rem;
+  }
+  
+  .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 2rem;
+  }
+  
+  .brand-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure images are contained within the card */
+  }
+  
+  .brand-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Adjust the image's size to cover the space proportionally */
+  }
+  
+  @media (max-width: 1024px) {
+    .brands-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .brands-grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 item per row on small screens */
+    }
+  }
+  /* Styles for the contact-section */
+  .contact-section {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+  }
+  
+  /* Style for each service item */
+  .service-item {
+    margin-bottom: 30px;
+  }
+  
+  /* Style for the <p> tags inside service-item */
+  .service-item p {
+    background-color: #8B4513; /* Brown color */
+    color: white;              /* White text for contrast */
+    padding: 15px;
+    border-radius: 8px;        /* Rounded corners */
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  /* Additional styles to enhance readability */
+  .service-item h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  /* Styles for the contact-section */
+  .contact-section {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+  }
+  
+  /* Wrapper for contact info box */
+  .contact-info-box {
+    background-color: #8B4513;  /* Brown color */
+    color: white;               /* White text */
+    padding: 20px;
+    border-radius: 8px;         /* Rounded corners */
+    margin-top: 20px;           /* Spacing from the heading */
+  }
+  
+  /* Styles for paragraphs inside the contact-info-box */
+  .contact-info-box p {
+    margin-bottom: 10px;        /* Spacing between paragraphs */
+    font-size: 16px;
+  }
+  
+  /* Heading style */
+  .contact-section h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
